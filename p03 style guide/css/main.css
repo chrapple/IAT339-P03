@@ -1,0 +1,166 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+body {
+  background-color: #e8f0fa;
+  padding: 2rem;
+}
+
+.element {
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: #607b9b;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  display: block;
+
+  background-color: #ffffff;
+  border: 1px #607b9b solid;
+  border-radius: 0.5em;
+
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+/* 
+  FONTS AND COLOURS -------------------
+*/
+/* fonts added to heading elements and paragraph element above */
+.colourChoices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.colourChoices div {
+  border: 1px #607b9b solid;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+#pageBgColour {
+  background-color: #e8f0fa;
+}
+
+#h1h2Colour {
+  background-color: #173e6b;
+  color: #eee;
+}
+
+#h3Colour {
+  background-color: #37506c;
+  color: #eee;
+}
+
+#h4Colour {
+  background-color: #596070;
+  color: #eee;
+}
+
+#pColour {
+  background-color: #eee;
+}
+
+#borderColour {
+  background-color: #607b9b;
+  color: #eee;
+}
+
+#hoverColour {
+  background-color: #679d83;
+  color: #eee;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", "Verdana", sans-serif;
+}
+
+h1,
+h2 {
+  color: #173e6b;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #37506c;
+  margin-bottom: 0.25rem;
+}
+
+h4 {
+  color: #596070;
+  margin-bottom: 0.25rem;
+}
+
+p,
+li {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  color: #000000;
+  margin: 0;
+}
+
+a {
+  font-family: "Atkinson Hyperlegible", "Open Sans", sans-serif;
+  /* for the style guide */
+  color: #596070;
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+.inTextLink {
+  color: #2361a8;
+}
+
+.inTextLink:hover,
+.inTextLink:after,
+.inTextLink:focus {
+  color: #679d83;
+  text-decoration: none;
+}
+
+/* Styling for the navigation button */
+.buttonNav {
+  display: inline-block;
+
+  background-color: #eee;
+  border: 1px #607b9b solid;
+  border-radius: 1em;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+
+  text-decoration: none;
+
+  transition-property: background-color, color;
+  transition-duration: 0.75s;
+}
+
+.buttonNav:hover,
+.buttonNav:focus {
+  background-color: #679d83;
+  color: #eee;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
