@@ -33,8 +33,6 @@
         <a href="#interactive_elements">Interactive Elements</a>
         <a href="#text_elements">Text Elements</a>
         <a href="#combined_elements">Combined Elements</a>
-        <a href="product_listing.html">Product Listing Template</a>
-        <a href="checkout.html">Checkout Template</a>
         <a href="#citations">Citations</a>
       </nav>
 
@@ -201,15 +199,18 @@
         <h3>Image as a Link</h3>
 
         <h4>CSS selector:</h4>
-        <p>.imgLink</p>
+        <p>.staticImage</p>
 
         <h4>Sample code:</h4>
         <code>
-          &lt;a class="imgLink"&gt;&lt;img src="img/iat235Flow.png" alt="Hero image of IAT235 project title page"&gt;&lt;/a&gt;
+          &lt;a class="staticImage"&gt;&lt;img src="img/iat235Flow.png" alt="Hero image of IAT235 project title page"&gt;&lt;/a&gt;
         </code>
 
         <h4>Rendered element:</h4>
-        <a href="#"><img class="imgLink" src="img/iat235Title.png" alt="Hero image of IAT235 project title page"></a>
+        <a class="imgLink" href="#">
+          <img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF">
+          <img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image">
+        </a>
       </section>
 
       <section class="element">
@@ -252,10 +253,38 @@
         <code>
           &lt;"&gt;
         </code>
+
+        <h4>Rendered element:</h4>
       </section>
 
       <section class="element">
         <h3>Project Listing</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.projectListed</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;"&gt;
+        </code>
+        
+        <h4>Rendered element:</h4>
+        <div class="projectListed">
+          <div class="projectImg">
+            <a class="imgLink" href="#">
+          <img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF">
+          <img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image">
+        </a>
+          </div>
+          <div class="projectDesc">
+            <div class="projectListEyebrow"><p>UX/UI Design</p><p>Course Project</p></div>
+            <a href="#"><h3>Project title</h3></a>
+            <h4>May 2024-July 2024</h4>
+            <p>Short project description</p>
+            <a class="buttonAction" href="#">See more</a>
+          </div>
+        </div>
+
       </section>
 
     </section>
@@ -267,8 +296,8 @@
       <h2>Citations</h2>
 
       <ul>
+        <li> Braille Institute. Designer. (2019). <strong>Atkinson Hyperlegible [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">https://fonts.google.com/specimen/Atkinson+Hyperlegible</a></li>      
         <li> Indian Type Foundry. Designer. (2015). <strong>Poppins [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Poppins?script=Latn&preview.script=Latn&query=poppins">https://fonts.google.com/specimen/Poppins?script=Latn&preview.script=Latn&query=poppins</a>.</li>
-        <li> Braille Institute. Designer. 2019. <strong>Atkinson Hyperlegible [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">https://fonts.google.com/specimen/Atkinson+Hyperlegible</a></li>      
       </ul>
 
     </section>

@@ -14,6 +14,7 @@ body {
   border-top-color: #607b9b;
 }
 
+/* STYLE GUIDE NAV */
 nav a:hover,
 nav a:focus {
   color: #607b9b;
@@ -83,6 +84,7 @@ ul {
   FONTS AND COLOURS -------------------
   had to declare below text elements otherwise it overwrote
 */
+/* PAGE COLOURS */
 .colourChoices {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -135,6 +137,7 @@ ul {
   INTERACTIVE ELEMENTS -------------------
 */
 
+/* IN TEXT LINK */
 .inTextLink {
   color: #596070;
 }
@@ -146,15 +149,16 @@ ul {
   text-decoration: none;
 }
 
-/* Styling for the navigation button */
+/* ACTION BUTTON */
 .buttonAction {
   display: inline-block;
 
   background-color: #eee;
   border: 1px #607b9b solid;
-  border-radius: 1em;
+  border-radius: 0.5em;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-  padding: 1em;
+  padding: 0.5em 1em;
+  margin: 1em 0;
 
   text-decoration: none;
 
@@ -168,26 +172,107 @@ ul {
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
+/* IMAGE WITH LINK */
+/* reference for overlaying image with gif: 
+https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-and-play-it-on-hover-and-reset */
+
 .imgLink {
+  display: inline-block;
+  position: relative;
+}
+
+.imgLink img {
+  display: block;
   max-width: 100%;
   border-radius: 1em;
-  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
 
   transition-property: box-shadow;
   transition-duration: 0.75s;
 }
 
-.imgLink:hover,
-.imgLink:focus {
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+.staticImage {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+.staticImage:hover {
+  opacity: 0;
+}
+
+/* VIDEO */
 .videoDemo {
   max-width: 100%;
   border-radius: 1em;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* 
   COMBINED ELEMENTS -------------------
 */
+/* PROJECT LIST CARD */
+.projectListed {
+  display: flex;
+  flex-direction: row;
+
+  max-width: 100%;
+  padding: 2em;
+  gap: 2.5em;
+  justify-content: center;
+
+  background-color: #ffffff;
+  border: 1px #607b9b solid;
+  border-radius: 1em;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.75s;
+}
+.projectListed:hover,
+.projectListed:focus {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.projectImg {
+  flex: 4;
+}
+.projectDesc {
+  flex: 5;
+}
+.projectListEyebrow {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.projectListEyebrow p {
+  padding: 0.5em;
+  font-size: 0.75em;
+  border: 1px #607b9b solid;
+  border-radius: 0.5em;
+  margin: 1em;
+}
+.projectDesc h3,
+.projectDesc a {
+  margin: 0;
+  text-decoration: none;
+}
+.projectDesc h4 {
+  font-weight: normal;
+  margin: 0;
+}
+.projectDesc p {
+  margin: 1.5em 0;
+}
+
+@media (max-width: 1119px) {
+  .projectImg {
+    flex: 6;
+  }
+}
+
+/* this isnt working
+@media (max-width: 720px) {
+  .projectListed {
+    flex-direction: column;
+    padding: 3em;
+  }
+} */
