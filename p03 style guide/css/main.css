@@ -16,6 +16,7 @@ body {
 
 nav a:hover,
 nav a:focus {
+  color: #607b9b;
   text-decoration: none;
 }
 
@@ -28,55 +29,8 @@ code {
 
   padding: 1em;
   margin-bottom: 1.5em;
-}
 
-/* 
-  FONTS AND COLOURS -------------------
-*/
-/* fonts added to heading elements and paragraph element above */
-.colourChoices {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-}
-
-.colourChoices div {
-  border: 1px #607b9b solid;
-  padding: 0.5em;
-  border-radius: 0.5em;
-}
-
-#pageBgColour {
-  background-color: #e8f0fa;
-}
-
-#h1h2Colour {
-  background-color: #173e6b;
-  color: #eee;
-}
-
-#h3Colour {
-  background-color: #37506c;
-  color: #eee;
-}
-
-#h4Colour {
-  background-color: #596070;
-  color: #eee;
-}
-
-#pColour {
-  background-color: #eee;
-}
-
-#borderColour {
-  background-color: #607b9b;
-  color: #eee;
-}
-
-#hoverColour {
-  background-color: #679d83;
-  color: #eee;
+  text-wrap: balance;
 }
 
 /* 
@@ -110,6 +64,8 @@ li {
   font-family: "Atkinson Hyperlegible", sans-serif;
   color: #000000;
   margin: 0;
+
+  text-wrap: balance;
 }
 
 a {
@@ -124,22 +80,74 @@ ul {
 }
 
 /* 
+  FONTS AND COLOURS -------------------
+  had to declare below text elements otherwise it overwrote
+*/
+.colourChoices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.colourChoices div {
+  border: 1px #607b9b solid;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+#pageBgColour {
+  background-color: #e8f0fa;
+}
+
+#h1h2Colour {
+  background-color: #173e6b;
+}
+
+#h3Colour {
+  background-color: #37506c;
+}
+
+#h4Colour {
+  background-color: #596070;
+}
+
+#pColour {
+  background-color: #eee;
+}
+
+#borderColour {
+  background-color: #607b9b;
+}
+
+#hoverColour {
+  background-color: #ced8e4;
+}
+
+#hoverColor p,
+#borderColour p,
+#h4Colour p,
+#h3Colour p,
+#h1h2Colour p {
+  color: #eee;
+}
+
+/* 
   INTERACTIVE ELEMENTS -------------------
 */
 
 .inTextLink {
-  color: #2361a8;
+  color: #596070;
 }
 
 .inTextLink:hover,
 .inTextLink:after,
 .inTextLink:focus {
-  color: #679d83;
+  color: #607b9b;
   text-decoration: none;
 }
 
 /* Styling for the navigation button */
-.buttonNav {
+.buttonAction {
   display: inline-block;
 
   background-color: #eee;
@@ -150,15 +158,34 @@ ul {
 
   text-decoration: none;
 
-  transition-property: background-color, color;
+  transition-property: background-color, box-shadow;
   transition-duration: 0.75s;
 }
 
-.buttonNav:hover,
-.buttonNav:focus {
-  background-color: #679d83;
-  color: #eee;
+.buttonAction:hover,
+.buttonAction:focus {
+  background-color: #ced8e4;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.imgLink {
+  max-width: 100%;
+  border-radius: 1em;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+
+  transition-property: box-shadow;
+  transition-duration: 0.75s;
+}
+
+.imgLink:hover,
+.imgLink:focus {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.videoDemo {
+  max-width: 100%;
+  border-radius: 1em;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* 
