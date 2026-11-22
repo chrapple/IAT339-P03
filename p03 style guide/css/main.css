@@ -3,7 +3,8 @@
   Default styling for the style guide 
 */
 body {
-  background-color: #e8f0fa;
+  /* background-color: #e8f0fa; */
+  background: linear-gradient(#fafafa, #f5fff9, #fafafa);
   padding: 2rem;
 }
 
@@ -11,21 +12,21 @@ body {
   padding-bottom: 2rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
-  border-top-color: #607b9b;
+  border-top-color: #384343;
 }
 
 /* STYLE GUIDE NAV */
 nav a:hover,
 nav a:focus {
-  color: #607b9b;
+  color: #384343;
   text-decoration: none;
 }
 
 code {
   display: block;
 
-  background-color: #ffffff;
-  border: 1px #607b9b solid;
+  background-color: #fafafa;
+  border: 1px #384343 solid;
   border-radius: 0.5em;
 
   padding: 1em;
@@ -46,17 +47,17 @@ h4 {
 
 h1,
 h2 {
-  color: #173e6b;
+  color: #384343;
   margin-bottom: 1.5rem;
 }
 
 h3 {
-  color: #37506c;
+  color: #3d5749;
   margin-bottom: 0.25rem;
 }
 
 h4 {
-  color: #596070;
+  color: #8fb29a;
   margin-bottom: 0.25rem;
 }
 
@@ -72,7 +73,7 @@ li {
 a {
   font-family: "Atkinson Hyperlegible", "Open Sans", sans-serif;
   /* for the style guide */
-  color: #596070;
+  color: #3d5749;
   margin-top: 0;
 }
 
@@ -92,37 +93,33 @@ ul {
 }
 
 .colourChoices div {
-  border: 1px #607b9b solid;
+  border: 1px #384343 solid;
   padding: 0.5em;
   border-radius: 0.5em;
 }
 
 #pageBgColour {
-  background-color: #e8f0fa;
+  background: linear-gradient(#fafafa, #f5fff9, #fafafa);
 }
 
 #h1h2Colour {
-  background-color: #173e6b;
+  background-color: #384343;
 }
 
 #h3Colour {
-  background-color: #37506c;
+  background-color: #3d5749;
 }
 
 #h4Colour {
-  background-color: #596070;
+  background-color: #8fb29a;
 }
 
 #pColour {
-  background-color: #eee;
-}
-
-#borderColour {
-  background-color: #607b9b;
+  background-color: #fafafa;
 }
 
 #hoverColour {
-  background-color: #ced8e4;
+  background-color: #cee4d6;
 }
 
 #hoverColor p,
@@ -130,7 +127,7 @@ ul {
 #h4Colour p,
 #h3Colour p,
 #h1h2Colour p {
-  color: #eee;
+  color: #fafafa;
 }
 
 /* 
@@ -139,13 +136,13 @@ ul {
 
 /* IN TEXT LINK */
 .inTextLink {
-  color: #596070;
+  color: #3d5749;
 }
 
 .inTextLink:hover,
 .inTextLink:after,
 .inTextLink:focus {
-  color: #607b9b;
+  color: #384343;
   text-decoration: none;
 }
 
@@ -153,11 +150,11 @@ ul {
 .buttonAction {
   display: inline-block;
 
-  background-color: #eee;
-  border: 1px #607b9b solid;
+  background-color: #fafafa;
+  border: 1px #384343 solid;
   border-radius: 0.5em;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
   margin: 1em 0;
 
   text-decoration: none;
@@ -168,7 +165,7 @@ ul {
 
 .buttonAction:hover,
 .buttonAction:focus {
-  background-color: #ced8e4;
+  background-color: #cee4d6;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -209,6 +206,36 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
 /* 
   COMBINED ELEMENTS -------------------
 */
+/* MAIN NAV */
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  margin: auto;
+
+  background-color: #fafafa;
+  padding: 0.25em 1em 1em 1em;
+  border: 1px #384343 solid;
+  border-radius: 1em;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+
+  align-items: center;
+  justify-items: center;
+}
+.siteTitle {
+  margin-left: 1em;
+  margin-right: auto;
+  margin-top: 1em;
+}
+.siteTitle {
+  margin-left: 1em;
+  margin-right: auto;
+  margin-top: 1em;
+}
+.mainNav .buttonAction {
+  margin: 1.75em 0.5em 1em 0.5em;
+}
+
 /* PROJECT LIST CARD */
 .projectListed {
   display: flex;
@@ -219,8 +246,8 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   gap: 2.5em;
   justify-content: center;
 
-  background-color: #ffffff;
-  border: 1px #607b9b solid;
+  background-color: #fafafa;
+  border: 1px #384343 solid;
   border-radius: 1em;
   box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
 
@@ -232,7 +259,7 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
 .projectImg {
-  flex: 4;
+  flex: 3;
 }
 .projectDesc {
   flex: 5;
@@ -246,7 +273,7 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
 .projectListEyebrow p {
   padding: 0.5em;
   font-size: 0.75em;
-  border: 1px #607b9b solid;
+  border: 1px #384343 solid;
   border-radius: 0.5em;
   margin: 1em;
 }
@@ -255,6 +282,12 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   margin: 0;
   text-decoration: none;
 }
+
+.projectDesc h3:hover,
+.projectDesc a:hover {
+  color: #384343;
+}
+
 .projectDesc h4 {
   font-weight: normal;
   margin: 0;
@@ -263,7 +296,7 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   margin: 1.5em 0;
 }
 
-@media (max-width: 1119px) {
+@media (max-width: 1120px) {
   .projectImg {
     flex: 6;
   }
