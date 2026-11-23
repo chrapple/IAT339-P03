@@ -3,8 +3,14 @@
   Default styling for the style guide 
 */
 body {
-  /* background-color: #e8f0fa; */
-  background: linear-gradient(#fafafa, #f5fff9, #fafafa);
+  background: linear-gradient(#fafafa, #eef3f7);
+  padding: 2rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.styleGuide body {
+  background: linear-gradient(#fafafa, #eef3f7);
   padding: 2rem;
 }
 
@@ -18,7 +24,7 @@ body {
 /* STYLE GUIDE NAV */
 nav a:hover,
 nav a:focus {
-  color: #384343;
+  color: #0e4b7c;
   text-decoration: none;
 }
 
@@ -42,29 +48,29 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Poppins", "Verdana", sans-serif;
+  font-family: "Bpmf Huninn", "Helvetica", sans-serif;
 }
 
 h1,
 h2 {
-  color: #384343;
+  color: #183c59;
   margin-bottom: 1.5rem;
 }
 
 h3 {
-  color: #3d5749;
+  color: #383c43;
   margin-bottom: 0.25rem;
 }
 
 h4 {
-  color: #8fb29a;
+  color: #0e4b7c;
   margin-bottom: 0.25rem;
 }
 
 p,
 li {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  color: #000000;
+  color: #222021;
   margin: 0;
 
   text-wrap: balance;
@@ -72,13 +78,16 @@ li {
 
 a {
   font-family: "Atkinson Hyperlegible", "Open Sans", sans-serif;
-  /* for the style guide */
-  color: #3d5749;
+  color: #383c43;
   margin-top: 0;
 }
 
 ul {
   list-style-type: circle;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* 
@@ -93,40 +102,40 @@ ul {
 }
 
 .colourChoices div {
-  border: 1px #384343 solid;
   padding: 0.5em;
   border-radius: 0.5em;
 }
 
 #pageBgColour {
-  background: linear-gradient(#fafafa, #f5fff9, #fafafa);
+  background: linear-gradient(#fafafa, #eef3f7);
 }
 
 #h1h2Colour {
-  background-color: #384343;
+  background-color: #183c59;
 }
 
 #h3Colour {
-  background-color: #3d5749;
+  background-color: #383c43;
 }
 
 #h4Colour {
-  background-color: #8fb29a;
+  background-color: #0e4b7c;
 }
 
 #pColour {
-  background-color: #fafafa;
+  background-color: #222021;
 }
 
 #hoverColour {
-  background-color: #cee4d6;
+  background-color: #a0c8e6;
 }
 
 #hoverColor p,
 #borderColour p,
 #h4Colour p,
 #h3Colour p,
-#h1h2Colour p {
+#h1h2Colour p,
+#pColour p {
   color: #fafafa;
 }
 
@@ -136,13 +145,13 @@ ul {
 
 /* IN TEXT LINK */
 .inTextLink {
-  color: #3d5749;
+  color: #383c43;
 }
 
 .inTextLink:hover,
 .inTextLink:after,
 .inTextLink:focus {
-  color: #384343;
+  color: #0e4b7c;
   text-decoration: none;
 }
 
@@ -151,7 +160,7 @@ ul {
   display: inline-block;
 
   background-color: #fafafa;
-  border: 1px #384343 solid;
+  border: 1px #383c435a solid;
   border-radius: 0.5em;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
   padding: 0.5em 1.5em;
@@ -165,7 +174,8 @@ ul {
 
 .buttonAction:hover,
 .buttonAction:focus {
-  background-color: #cee4d6;
+  background-color: #bbdaec;
+  color: #183c59;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -210,22 +220,21 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
 .mainNav {
   display: flex;
   flex-direction: row;
-  max-width: 50%;
+  width: 75%;
   margin: auto;
 
-  background-color: #fafafa;
+  background-color: #fafafaf0;
   padding: 0.25em 1em 1em 1em;
-  border: 1px #384343 solid;
   border-radius: 1em;
   box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
 
   align-items: center;
   justify-items: center;
-}
-.siteTitle {
-  margin-left: 1em;
-  margin-right: auto;
-  margin-top: 1em;
+
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .siteTitle {
   margin-left: 1em;
@@ -234,6 +243,89 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
 }
 .mainNav .buttonAction {
   margin: 1.75em 0.5em 1em 0.5em;
+}
+
+/* code for shrinking the nav:
+https://purecss.com/shrinking-header/ */
+@supports (animation-timeline: scroll()) {
+  .mainNav:not(.styleGuide .mainNav) {
+    animation: shrink-nav linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 100px;
+  }
+}
+
+@keyframes shrink-nav {
+  to {
+    width: 40%;
+    padding: 0.1em 0.9em 0.2em 0.9em;
+    font-size: 70%;
+  }
+}
+
+/* specific media queries for the nav bar */
+@media (max-width: 1060px) and (min-width: 670px) {
+  .mainNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .siteTitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .siteTitle h1 {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media (max-width: 670px) {
+  .mainNav {
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+  .siteTitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .siteTitle h1 {
+    text-align: center;
+    margin: 0;
+  }
+  .mainNav .buttonAction {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* allows nav to stay in the style guide place in style guide */
+.styleGuide .mainNav {
+  position: static;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+}
+
+/* FOOTER */
+.mainFooter {
+  display: flex;
+  flex-direction: row;
+  padding: 1em 1em 2em 1em;
+
+  background-color: #fafafaf0;
+  border-radius: 1em 1em 0 0;
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.15);
+
+  margin-bottom: 0;
+}
+
+.footerLinks {
+  margin-left: auto;
+  text-align: right;
 }
 
 /* PROJECT LIST CARD */
@@ -247,7 +339,7 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   justify-content: center;
 
   background-color: #fafafa;
-  border: 1px #384343 solid;
+  border: 1px #383c435a solid;
   border-radius: 1em;
   box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
 
@@ -273,7 +365,7 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
 .projectListEyebrow p {
   padding: 0.5em;
   font-size: 0.75em;
-  border: 1px #384343 solid;
+  border: 1px #383c435a solid;
   border-radius: 0.5em;
   margin: 1em;
 }
@@ -302,10 +394,86 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   }
 }
 
-/* this isnt working
-@media (max-width: 720px) {
-  .projectListed {
-    flex-direction: column;
-    padding: 3em;
-  }
-} */
+/* TEMPLATES */
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 75vh;
+  overflow-y: hidden;
+  object-fit: cover;
+
+  margin-bottom: 1em;
+}
+
+.heroImage img {
+  filter: brightness(60%);
+}
+
+.pageTitle {
+  margin: 2em;
+  margin-top: 40vh;
+  margin-bottom: 20vh;
+  margin-right: auto;
+  text-align: left;
+  padding: 1em;
+  max-width: fit-content;
+
+  background-color: #fafafa;
+  border-radius: 0.5em;
+  border: 1px #383c435a solid;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+#overview {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  text-align: center;
+  padding: 1em;
+  max-width: 100%;
+  margin-bottom: 4em;
+}
+
+.factCards {
+  align-content: top;
+  background-color: #fafafa;
+  border-radius: 1em;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 1em 1em 2em 1em;
+
+  transition-property: box-shadow;
+  transition-duration: 0.75s;
+}
+
+.factCards:hover {
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.introContainer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 2em;
+
+  margin: 2em;
+}
+
+.processContainer {
+  margin: 2em;
+}
+
+.processArtifacts {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin: 1em 0;
+  height: 40vh;
+}
+
+.processArtifacts img {
+  max-height: 100%;
+  width: auto;
+  border-radius: 1em;
+}

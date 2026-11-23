@@ -5,12 +5,13 @@
 
     <meta charset="utf-8">
     <title>P03 - Style Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- IMPORT GOOGLE FONTS -->
-    <!-- Poppins -->
+    <!-- Bpmf Huninn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bpmf+Huninn&display=swap" rel="stylesheet">
 
     <!-- Atkinson Hyperlegible -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
 
   </head>
 
-  <body>
+  <body class="styleGuide">
 
     <header>
       <h1>P03 - Style Guide</h1>
@@ -40,7 +41,7 @@
       <h2>Fonts and Colours</h2>
       <section class="element">
         <h3>Fonts</h3>
-        <h4>Poppins for headings</h4>
+        <h4>Bpmf Huninn for headings</h4>
         <p>Atkinson Hyperlegible for body text</p>
 
       </section>
@@ -48,12 +49,12 @@
       <section class="element">
         <h3>Colours</h3>
         <div class="colourChoices">       
-          <div id="h1h2Colour"><p >#384343 for h1 and h2, borders and anchor hover</p></div>
-          <div id="h3Colour"><p>#3d5749; for h3 and anchor</p></div>
-          <div id="h4Colour"><p >#8fb29a for h4</p></div>
-          <div id="hoverColour"><p>#cee4d6 for hover on interactive elements</p></div>
-          <div id="pColour"><p>#000000 and #fafafa for paragraph elements</p></div>
-          <div id="pageBgColour"><p>gradient of #fafafa and #f5fff9 for page background</p></div>                   
+          <div id="h1h2Colour"><p >#183C59 for h1 and h2 and anchor hover</p></div>
+          <div id="h3Colour"><p>#383c43 for h3 and anchor</p></div>
+          <div id="h4Colour"><p >#0E4B7C for h4 and link on hover</p></div>
+          <div id="hoverColour"><p>#a0c8e6 for hover on buttons</p></div>
+          <div id="pColour"><p>#222021 for paragraph text</p></div>
+          <div id="pageBgColour"><p>gradient of #fafafa and #eef3f7 for page background</p></div>                   
         </div>
       </section>
 
@@ -264,6 +265,29 @@
         </nav>
       </section>
 
+      <h3>Footer</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.mainFooter</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;"&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <footer class="mainFooter">
+            <div>
+              <p>©2026 Kirsten Lee</p>
+            </div>
+            <div class="footerLinks">
+              <p>Project Links for IAT339</p>
+              <a class="inTextLink" href="#">Style Guide</a>
+              <a class="inTextLink" href="#">GitHub Repository</a>
+            </div>
+        </footer>
+      </section>
+
       <section class="element">
         <h3>Project Listing</h3>
 
@@ -286,7 +310,7 @@
           <div class="projectDesc">
             <div class="projectListEyebrow"><p>UX/UI Design</p><p>Course Project</p></div>
             <a href="#"><h3>Project title</h3></a>
-            <h4>May 2024-July 2024</h4>
+            <h4>May 2024 to July 2024</h4>
             <p>Short project description</p>
             <a class="buttonAction" href="#">See more</a>
           </div>
