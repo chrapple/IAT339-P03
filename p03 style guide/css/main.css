@@ -263,10 +263,9 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   color: #183c59;
   margin: 0;
   text-decoration: none;
-
-  background-color: #bbdaec00;
-
-  transition: background-color, 0.75s;
+  border-radius: 0.25em;
+  padding: 0 0.25em;
+  transition: color, 0.75s;
 }
 .siteTitle a:hover {
   background-color: #bbdaec;
@@ -419,7 +418,7 @@ https://purecss.com/shrinking-header/ */
 
 .projectDesc h3:hover,
 .projectDesc a:hover {
-  color: #384343;
+  color: #0e4b7c;
 }
 
 .projectDesc h4 {
