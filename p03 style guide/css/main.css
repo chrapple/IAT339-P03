@@ -4,7 +4,7 @@
 */
 
 :root {
-  font-size: 16px;
+  --text-size: 16px;
 }
 
 body {
@@ -115,7 +115,7 @@ img {
 }
 
 .colourChoices div {
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 0.5em;
 }
 
@@ -180,6 +180,7 @@ img {
   margin: 1em 0;
 
   text-decoration: none;
+  text-transform: lowercase;
 
   transition-property: background-color, box-shadow;
   transition-duration: 0.75s;
@@ -255,6 +256,21 @@ https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-a
   margin-right: auto;
   margin-top: 1em;
 }
+.siteTitle a {
+  font-family: "Bpmf Huninn", "Helvetica", sans-serif;
+  text-transform: lowercase;
+  font-size: 2rem;
+  color: #183c59;
+  margin: 0;
+  text-decoration: none;
+
+  background-color: #bbdaec00;
+
+  transition: background-color, 0.75s;
+}
+.siteTitle a:hover {
+  background-color: #bbdaec;
+}
 .mainNav .buttonAction {
   display: inline-block;
   margin: 1.75em 0.5em 1em 0.5em;
@@ -268,13 +284,25 @@ https://purecss.com/shrinking-header/ */
     animation-timeline: scroll(root);
     animation-range: 0px 100px;
   }
+
+  .mainNav:not(.styleGuide .mainNav) .siteTitle a {
+    animation: shrink-title linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 100px;
+  }
 }
 
 @keyframes shrink-nav {
   to {
     width: 40%;
-    padding: 0.1em 0.9em 0.2em 0.9em;
-    font-size: 70%;
+    padding: 0.1em 0.9em 0.3em 0.9em;
+    font-size: 80%;
+  }
+}
+
+@keyframes shrink-title {
+  to {
+    font-size: 1.5rem;
   }
 }
 
@@ -288,7 +316,7 @@ https://purecss.com/shrinking-header/ */
     margin-left: 0;
     margin-right: 0;
   }
-  .siteTitle h1 {
+  .siteTitle a {
     text-align: center;
     margin: 0;
   }
@@ -302,7 +330,7 @@ https://purecss.com/shrinking-header/ */
     margin-left: 0;
     margin-right: 0;
   }
-  .siteTitle h1 {
+  .siteTitle a {
     text-align: center;
     margin: 0;
     font-size: 1.25em;
@@ -364,6 +392,7 @@ https://purecss.com/shrinking-header/ */
   transition-property: background-color, box-shadow, translate;
   transition-duration: 0.75s;
 }
+/* for the slide animation https://www.tutorialspoint.com/article/how-to-translate-an-image-or-icon-by-hovering-over-it */
 .projectCard:hover,
 .projectCard:focus {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
@@ -403,7 +432,7 @@ https://purecss.com/shrinking-header/ */
 
 /* TEMPLATES */
 section:not(.styleGuide section, .heroImage, #overview, #pageTitle) {
-  margin: 5vh 15vw 0 15vw;
+  margin: 10vh 15vw 0 15vw;
 }
 
 .heroImage {

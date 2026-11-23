@@ -27,12 +27,14 @@
 
     <header>
       <h1>P03 - Style Guide</h1>
-      <nav>        
-        <a href="#fonts_colours">Fonts and Colours</a>
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
-        <a href="#citations">Citations</a>
+
+      <nav aria-label="Main navigation for style guide">
+        <a class="buttonAction" href="#fonts_colours">fonts and colours</a>
+        <a class="buttonAction" href="#interactive_elements">interactive elements</a>
+        <a class="buttonAction" href="#text_elements">text elements</a>
+        <a class="buttonAction" href="#combined_elements">Combined elements</a>
+        <a class="buttonAction" href="analysisTemplate.html">analysis template</a>
+        <a class="buttonAction" href="#citations">citations</a>
       </nav>
     </header>
 
@@ -51,10 +53,10 @@
         <div class="colourChoices">       
           <div id="h1h2Colour"><p >#183C59 for h1 and h2 and anchor hover</p></div>
           <div id="h3Colour"><p>#383c43 for h3 and anchor</p></div>
-          <div id="h4Colour"><p >#0E4B7C for h4 and link on hover</p></div>
+          <div id="h4Colour"><p >#0E4B7C for h4</p></div>
           <div id="hoverColour"><p>#a0c8e6 for hover on buttons</p></div>
           <div id="pColour"><p>#222021 for paragraph text</p></div>
-          <div id="pageBgColour"><p>gradient of #fafafa and #eef3f7 for page background</p></div>                   
+          <div id="pageBgColour"><p>gradient of #fafafa to #eef3f7 for page background</p></div>                   
         </div>
       </section>
 
@@ -197,7 +199,7 @@
         <h3>Image as a Link</h3>
 
         <h4>CSS selector:</h4>
-        <p>.staticImage</p>
+        <p>.imgLink, .staticImage, .animatedImage</p>
 
         <h4>Sample code:</h4>
         <code>
@@ -249,13 +251,22 @@
 
         <h4>Sample code:</h4>
         <code>
-          &lt;"&gt;
+          &lt;nav class="mainNav" aria-label="Main navigation for website"&gt; 
+            &lt;div class="siteTitle"&gt; 
+              &lt;a href="#"&gt;Kirsten Lee&lt;/a&gt; 
+            &lt;/div&gt; 
+            &lt;div&gt; 
+              &lt;a class="buttonAction" href="#"&gt;home&lt;/a&gt; 
+              &lt;a class="buttonAction" href="#"&gt;about&lt;/a&gt; 
+              &lt;a class="buttonAction" href="#"&gt;projects&lt;/a&gt; 
+            &lt;/div&gt; 
+          &lt;/nav&gt; 
         </code>
 
         <h4>Rendered element:</h4>
         <nav class="mainNav" aria-label="Main navigation for website">
           <div class="siteTitle">
-            <h1>Kirsten Lee</h1>
+            <a href="#">Kirsten Lee</a>
           </div>
           <div>
             <a class="buttonAction" href="#">home</a>
@@ -268,11 +279,20 @@
       <h3>Footer</h3>
 
         <h4>CSS selector:</h4>
-        <p>.mainFooter</p>
+        <p>.mainFooter, .footerLinks (.inTextLink)</p>
 
         <h4>Sample code:</h4>
         <code>
-          &lt;"&gt;
+          &lt;footer class="mainFooter"&gt; 
+            &lt;div&gt; 
+              &lt;p&gt;©2026 Kirsten Lee&lt;/p&gt; 
+            &lt;/div&gt; 
+            &lt;div class="footerLinks"&gt; 
+              &lt;p&gt;Project Links for IAT339&lt;/p&gt; 
+              &lt;a class="inTextLink" href="#"&gt;Style Guide&lt;/a&gt; 
+              &lt;a class="inTextLink" href="https://github.com/chrapple/IAT339-P03"&gt;GitHub Repository&lt;/a&gt; 
+            &lt;/div&gt; 
+          &lt;/footer&gt; 
         </code>
 
         <h4>Rendered element:</h4>
@@ -292,18 +312,66 @@
         <h3>Project Listing</h3>
 
         <h4>CSS selector:</h4>
-        <p>.projectCard</p>
+        <p>.projectList, .projectCard, .projectImg (.imgLink, .animatedImage, .staticImage), .projectDesc, .projectListEyebrow, .buttonAction</p>
 
         <h4>Sample code:</h4>
         <code>
-          &lt;"&gt;
+          &lt;section class="projectList"&gt; 
+            &lt;div class="projectCard"&gt; 
+              &lt;div class="projectImg"&gt; 
+                &lt;a class="imgLink" href="analysisTemplate.html"&gt; 
+              &lt;img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF"&gt; 
+              &lt;img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image"&gt; 
+            &lt;/a&gt; 
+              &lt;/div&gt; 
+              &lt;div class="projectDesc"&gt; 
+                &lt;div class="projectListEyebrow"&gt;&lt;p&gt;UX/UI Design&lt;/p&gt;&lt;p&gt;Interaction Design&lt;/p&gt;&lt;p&gt;Course Project&lt;/p&gt;&lt;/div&gt; 
+                &lt;a href="#"&gt;&lt;h3&gt;Project title&lt;/h3&gt;&lt;/a&gt; 
+                &lt;h4&gt;May 2024 to July 2024&lt;/h4&gt; 
+                &lt;p&gt;Short project description&lt;/p&gt; 
+                &lt;a class="buttonAction" href="analysisTemplate.html"&gt;See more &rarr;&lt;/a&gt; 
+              &lt;/div&gt; 
+            &lt;/div&gt; 
+              
+            &lt;div class="projectCard"&gt; 
+              &lt;div class="projectImg"&gt; 
+                &lt;a class="imgLink" href="analysisTemplate.html"&gt; 
+              &lt;img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF"&gt; 
+              &lt;img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image"&gt; 
+            &lt;/a&gt; 
+              &lt;/div&gt; 
+              &lt;div class="projectDesc"&gt; 
+                &lt;div class="projectListEyebrow"&gt;&lt;p&gt;UX/UI Design&lt;/p&gt;&lt;p&gt;Interaction Design&lt;/p&gt;&lt;p&gt;Course Project&lt;/p&gt;&lt;/div&gt; 
+                &lt;a href="#"&gt;&lt;h3&gt;Project title&lt;/h3&gt;&lt;/a&gt; 
+                &lt;h4&gt;May 2024 to July 2024&lt;/h4&gt; 
+                &lt;p&gt;Short project description&lt;/p&gt; 
+                &lt;a class="buttonAction" href=analysisTemplate.html"&gt;See more &rarr;&lt;/a&gt; 
+              &lt;/div&gt; 
+            &lt;/div&gt;
+              
+            &lt;div class="projectCard"&gt; 
+              &lt;div class="projectImg"&gt; 
+                &lt;a class="imgLink" href="analysisTemplate.html"&gt; 
+              &lt;img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF"&gt; 
+              &lt;img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image"&gt; 
+            &lt;/a&gt; 
+              &lt;/div&gt; 
+              &lt;div class="projectDesc"&gt; 
+                &lt;div class="projectListEyebrow"&gt;&lt;p&gt;UX/UI Design&lt;/p&gt;&lt;p&gt;Interaction Design&lt;/p&gt;&lt;p&gt;Course Project&lt;/p&gt;&lt;/div&gt; 
+                &lt;a href="#"&gt;&lt;h3&gt;Project title&lt;/h3&gt;&lt;/a&gt; 
+                &lt;h4&gt;May 2024 to July 2024&lt;/h4&gt; 
+                &lt;p&gt;Short project description&lt;/p&gt; 
+                &lt;a class="buttonAction" href="analysisTemplate.html"&gt;See more &rarr;&lt;/a&gt; 
+              &lt;/div&gt; 
+            &lt;/div&gt; 
+          &lt;/section&gt;
         </code>
         
         <h4>Rendered element:</h4>
         <section class="projectList">
         <div class="projectCard">
           <div class="projectImg">
-            <a class="imgLink" href="#">
+            <a class="imgLink" href="analysisTemplate.html">
           <img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF">
           <img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image">
         </a>
@@ -313,13 +381,13 @@
             <a href="#"><h3>Project title</h3></a>
             <h4>May 2024 to July 2024</h4>
             <p>Short project description</p>
-            <a class="buttonAction" href="#">See more &rarr;</a>
+            <a class="buttonAction" href="analysisTemplate.html">See more &rarr;</a>
           </div>
         </div>
 
         <div class="projectCard">
           <div class="projectImg">
-            <a class="imgLink" href="#">
+            <a class="imgLink" href="analysisTemplate.html">
           <img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF">
           <img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image">
         </a>
@@ -329,13 +397,13 @@
             <a href="#"><h3>Project title</h3></a>
             <h4>May 2024 to July 2024</h4>
             <p>Short project description</p>
-            <a class="buttonAction" href="#">See more &rarr;</a>
+            <a class="buttonAction" href=analysisTemplate.html">See more &rarr;</a>
           </div>
         </div>
 
         <div class="projectCard">
           <div class="projectImg">
-            <a class="imgLink" href="#">
+            <a class="imgLink" href="analysisTemplate.html">
           <img class="animatedImage" src="img/iat235TitleGIF.gif" alt="Hero image of IAT235 project title page as an animated GIF">
           <img class="staticImage" src="img/iat235Title.png" alt="Hero image of IAT235 project title page as a static image">
         </a>
@@ -345,7 +413,7 @@
             <a href="#"><h3>Project title</h3></a>
             <h4>May 2024 to July 2024</h4>
             <p>Short project description</p>
-            <a class="buttonAction" href="#">See more &rarr;</a>
+            <a class="buttonAction" href="analysisTemplate.html">See more &rarr;</a>
           </div>
         </div>
         </section>
@@ -362,7 +430,11 @@
 
       <ul>
         <li> Braille Institute. Designer. (2019). <strong>Atkinson Hyperlegible [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">https://fonts.google.com/specimen/Atkinson+Hyperlegible</a></li>      
-        <li> Indian Type Foundry. Designer. (2015). <strong>Poppins [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Poppins?script=Latn&preview.script=Latn&query=poppins">https://fonts.google.com/specimen/Poppins?script=Latn&preview.script=Latn&query=poppins</a>.</li>
+        <li> But Ko. Designer. (2015). <strong>Bpmf Huninn [Font]</strong>. Retrieved from <a href="https://fonts.google.com/specimen/Bpmf+Huninn"> https://fonts.google.com/specimen/Bpmf+Huninn</a>.</li>
+        <li> Pure CSS. (2026). <strong>CSS Shrinking Sticky Header on Scroll</strong>. Retrieved from <a href="https://purecss.com/shrinking-header/"> https://purecss.com/shrinking-header/</a>.</li>
+        <li> Stack Overflow. (2015). <strong>How to have an anim gif on a link and play it on hover and reset</strong>. Retrieved from <a href="https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-and-play-it-on-hover-and-reset"> https://stackoverflow.com/questions/27752500/how-to-have-an-anim-gif-on-a-link-and-play-it-on-hover-and-reset</a>.</li>
+        <li> Tutorials Point. <strong>How to translate an image or icon by hovering over it?</strong>. Retrieved from <a href="https://www.tutorialspoint.com/article/how-to-translate-an-image-or-icon-by-hovering-over-it">https://www.tutorialspoint.com/article/how-to-translate-an-image-or-icon-by-hovering-over-it</a>.</li>
+        <li> W3Schools. <strong>HTML &lt;video&gt; Tag</strong>. Retrieved from <a href="https://www.w3schools.com/tags/tag_video.asp"> https://www.w3schools.com/tags/tag_video.asp</a>.</li>
       </ul>
 
     </section>
